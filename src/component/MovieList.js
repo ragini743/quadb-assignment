@@ -6,7 +6,7 @@ const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
   const getMovie = async () => {
     console.log("hello");
-    const data = await fetch(movieData);
+    const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fapi.tvmaze.com%2Fsearch%2Fshows%3Fq%3Dall");
     const json = await data.json();
     // console.log("json", json);
     setMovieList(json);
