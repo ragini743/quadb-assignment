@@ -1,0 +1,1 @@
+export const movieData ="https://api.tvmaze.com/search/shows?q=all";
