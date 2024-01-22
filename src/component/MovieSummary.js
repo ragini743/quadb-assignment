@@ -24,10 +24,12 @@ const MovieSummary = () => {
     const {image,name,language,rating ,status ,summary,url} = summarys ;
 
   return (
-    <div className='w-[80%] mx-auto sm:w-[70%] md:w-[50%]'>
-       <div className='w-full mt-8'>
+    <div className='py-8 relative lg:h-[100vh]'>
+        <div className='w-[80%] mx-auto sm:w-[70%] md:w-[80%] lg:flex lg:justify-between'>
+       <div className='w-[40%] sm:[60%] md:[70%]  mx-auto lg:w-[35%] lg:mr-[15%]'>
         <img src ={image.medium} alt='' className='w-full'></img>
        </div>
+       <div className='lg:w-[50%]'>
        <div className='my-4'>
         <h1 className='text-lg font-bold'>Name: {name}</h1>
         <p><b>lang :</b> {language}</p>
@@ -40,11 +42,19 @@ const MovieSummary = () => {
             <button className='px-3 py-1 bg-blue-950 text-white rounded-lg'><Link to ={url}> Go to website</Link></button>
        </div>
        <div className='rounded-lg text-center my-4' onClick={() =>{
-        setIsForm(true)
+        setIsForm(!isForm)
        }}>
             <button className='px-3 py-1 bg-blue-950 text-white rounded-lg'> book</button>
        </div>
+       <div className=' lg:w-[100%] mx-auto '>
        {isForm?<FormData movieName={name} />:null}
+       </div>
+       </div>
+       </div>
+       {/* <div className='lg:pt-20 lg:w-[50%] mx-auto '>
+       {isForm?<FormData movieName={name} />:null}
+       </div> */}
+    
     </div>
   )
 }
