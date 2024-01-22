@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
   const getMovie = async () => {
-    console.log("hello");
-    const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fapi.tvmaze.com%2Fsearch%2Fshows%3Fq%3Dall");
+    const data = await fetch(movieData);
     const json = await data.json();
-    // console.log("json", json);
+  console.log(json)
     setMovieList(json);
   };
   useEffect(() => {

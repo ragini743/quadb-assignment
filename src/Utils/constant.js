@@ -1,1 +1,1 @@
-export const movieData ="https://api.tvmaze.com/search/shows?q=all";
+export const movieData ="https://corsproxy.org/?https%3A%2F%2Fapi.tvmaze.com%2Fsearch%2Fshows%3Fq%3Dall";

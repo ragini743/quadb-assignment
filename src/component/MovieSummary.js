@@ -11,7 +11,7 @@ const MovieSummary = () => {
   const getData = async () => {
     const data = await fetch(`https://api.tvmaze.com/shows/${movieId}`);
     const json = await data.json();
-    console.log(json);
+
     setSummary(json);
   };
 
@@ -23,6 +23,9 @@ const MovieSummary = () => {
     return "Loading";
   }
   const { image, name, language, rating, status, summary, url } = summarys;
+  if(image === null){
+    return "Loading"
+  }
 
   return (
     <div className="py-8 relative lg:h-[100vh]">
@@ -43,9 +46,10 @@ const MovieSummary = () => {
               {" "}
               <b>status :</b> {status}
             </p>
-            
+
             <p className="text-xs leading-5 md:text-sm">
-              <b>Description</b> : <span dangerouslySetInnerHTML={{__html: summary}} />
+              <b>Description</b> :{" "}
+              <span dangerouslySetInnerHTML={{ __html: summary }} />
             </p>
           </div>
           <div className="rounded-lg text-center">
@@ -69,14 +73,13 @@ const MovieSummary = () => {
 
           {isForm && (
             <div className=" lg:w-[100%] mx-auto ">
-              {isForm ? <FormData movieName={name} setIsForm={setIsForm}/> : null}
+              {isForm ? (
+                <FormData movieName={name} setIsForm={setIsForm} />
+              ) : null}
             </div>
           )}
         </div>
       </div>
-      {/* <div className='lg:pt-20 lg:w-[50%] mx-auto '>
-       {isForm?<FormData movieName={name} />:null}
-       </div> */}
     </div>
   );
 };
