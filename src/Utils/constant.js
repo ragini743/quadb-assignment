@@ -1,1 +1,2 @@
 export const movieData ="https://corsproxy.org/?https%3A%2F%2Fapi.tvmaze.com%2Fsearch%2Fshows%3Fq%3Dall";
+export const userImage ="https://png.pngtree.com/element_our/png/20181227/movie-icon-which-is-designed-for-all-application-purpose-new-png_287896.jpg"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Link, useParams } from "react-router-dom";
 import FormData from "./FormData.js";
+import { userImage } from "../Utils/constant.js";
 
 const MovieSummary = () => {
   const [summarys, setSummary] = useState(null);
@@ -23,15 +24,13 @@ const MovieSummary = () => {
     return "Loading";
   }
   const { image, name, language, rating, status, summary, url } = summarys;
-  if(image === null){
-    return "Loading"
-  }
+ 
 
   return (
     <div className="py-8 relative lg:h-[100vh]">
       <div className="w-[80%] mx-auto sm:w-[70%] md:w-[80%] lg:flex lg:justify-between">
         <div className="w-[40%] sm:[60%] md:[70%]  mx-auto lg:w-[35%] lg:mr-[15%]">
-          <img src={image.medium} alt="" className="w-full"></img>
+          <img src={image?image.medium:userImage} alt="" className="w-full"></img>
         </div>
         <div className="lg:w-[50%]">
           <div className="my-4">

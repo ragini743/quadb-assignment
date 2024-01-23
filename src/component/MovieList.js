@@ -18,8 +18,8 @@ const MovieList = () => {
   }
 
   return (
-    <div className=" w-[70%] mx-auto my-5 sm:[80%] md:w-[70%] lg:w-[70%]">
-      <div className="grid gap-28 sm:gap-16 sm:grid-cols-2 md:gap-10 md:grid-cols-3">
+    <div className=" w-[70%] mx-auto my-5 sm:[80%] md:w-[70%] lg:w-[70%] md:my-10">
+      <div className="grid gap-20 sm:gap-16 sm:grid-cols-2 md:gap-20 md:grid-cols-3 grid-flow-row">
         {movieList.map((movie) => {
           return (
             <Link to={`/shows/${movie.show.id}`} key={movie.show.id}>
