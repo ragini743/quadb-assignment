@@ -1,5 +1,6 @@
 import React from "react";
-import { userImage } from "../Utils/constant";
+
+import { userImage } from "../../Utils/constant";
 
 export const Movie = ({ movie }) => {
   const { show } = movie;

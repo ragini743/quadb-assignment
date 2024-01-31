@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Link, useParams } from "react-router-dom";
 import FormData from "./FormData.js";
-import { userImage } from "../Utils/constant.js";
+import { userImage } from "../../Utils/constant.js";
 
 const MovieSummary = () => {
   const [summarys, setSummary] = useState(null);
@@ -32,7 +32,7 @@ const MovieSummary = () => {
         <div className="w-[40%] sm:[60%] md:[70%]  mx-auto lg:w-[35%] lg:mr-[15%]">
           <img src={image?image.medium:userImage} alt="" className="w-full"></img>
         </div>
-        <div className="lg:w-[50%]">
+        <div className="lg:w-[60%]">
           <div className="my-4">
             <h1 className="text-lg font-bold">Name: {name}</h1>
             <p>

@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MovieList from "./component/MovieList";
-
-import MovieSummary from "./component/MovieSummary";
+import MovieList from "./component/screen-1/MovieList";
+import MovieSummary from "./component/screen-2/MovieSummary";
 const appRouter = createBrowserRouter(
   [{
     path:"/",
@@ -11,7 +10,6 @@ const appRouter = createBrowserRouter(
       element:<MovieSummary />,
     }
       
-    
   ]
 )
 
@@ -19,7 +17,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={appRouter} />
- {/* <MovieList /> */}
     </div>
   );
 }

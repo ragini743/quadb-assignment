@@ -24,11 +24,11 @@ const FormData = ({ movieName, setIsForm }) => {
           ></input>
         </div>
         <div className="border-gray-50 p-2 pt-4 flex flex-col pl-4 sm:flex-row sm:items-center border-2 shadow-lg rounded-lg">
-          <label>Phone no : </label>
+          <label className="">Phone no : </label>
           <input
             type="number"
-            placeholder="enter your phone numer"
-            className="outline-none  rounded-lg py-1 ml-4"
+            placeholder="enter your phone number"
+            className="outline-none rounded-lg py-1 ml-4 "
             defaultValue={phone}
             onChange={(event) => {
                 localStorage.setItem("phone", event.target.value);
@@ -39,7 +39,7 @@ const FormData = ({ movieName, setIsForm }) => {
           <label>Email: </label>
           <input
             type="email"
-            placeholder="enter your phone email"
+            placeholder="enter your phone email "
             className="outline-none rounded-lg py-1 ml-4"
             defaultValue={email}
             onChange={(event) => {

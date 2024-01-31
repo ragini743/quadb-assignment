@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { movieData } from "../Utils/constant";
+import { movieData } from "../../Utils/constant";
+
 import Movie from "./Movie";
 import { Link } from "react-router-dom";
 const MovieList = () => {
